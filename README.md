@@ -10,4 +10,4 @@ npm i
 npm run dev
 
 
-# By Daniela Quesada
+# By Daniela Quesada danshca@gmail.com
