@@ -1,8 +1,6 @@
 export class StoreState {
-  idCount = 1;
-  notes = {
-    0: { title: "los", desc: "lols", tags: ["super"], id: 0 }
-  };
+  idCount = 0;
+  notes = {};
 }
 
 export default {
