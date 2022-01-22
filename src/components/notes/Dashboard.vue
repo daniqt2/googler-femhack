@@ -30,10 +30,10 @@
     </div>
     <div v-if="!noteLength > 0">
       <p class="text-3xl text-gray-600">
-        You dont have any notes! Go add some :)
+        You don't have any notes! Go add some :)
       </p>
     </div>
-    <div>
+    <div v-else>
       <grid-view v-if="currentView == VIEWS.GRID" :notes="notes"></grid-view>
       <list-view v-else :notes="notes"></list-view>
     </div>

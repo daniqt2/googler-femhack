@@ -68,8 +68,10 @@ export default {
       this.current = val;
     },
     loginOrRegister() {
-      if (this.current === ACTIVE.LOGIN) this.loginUser();
-      else this.registerUser();
+      if (this.user && this.pswrd) {
+        if (this.current === ACTIVE.LOGIN) this.loginUser();
+        else this.registerUser();
+      }
     },
     loginUser() {
       this.error = false;

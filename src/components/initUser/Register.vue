@@ -12,6 +12,7 @@
       <p>Repeat Password</p>
       <input type="password" @input="emitPassword" v-model="pswrd" />
     </div>
+    <p class="text-google-red" v-if="!samePassword">Passwords don't match</p>
   </div>
 </template>
 
@@ -22,15 +23,23 @@ export default {
     return {
       user: null,
       pswrd: null,
-      firstPswrd: null
+      firstPswrd: null,
+      passwordError: null
     };
+  },
+  computed: {
+    samePassword() {
+      if (this.firstPswrd && this.pswrd) {
+        return this.firstPswrd === this.pswrd;
+      } else return true;
+    }
   },
   methods: {
     emitUsername() {
       this.$emit("userSet", this.user);
     },
     emitPassword() {
-      if (this.firstPswrd === this.pswrd) this.$emit("pswrdSet", this.pswrd);
+      if (this.samePassword) this.$emit("pswrdSet", this.pswrd);
     }
   }
 };
