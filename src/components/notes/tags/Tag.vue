@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="tagText.length"
     class="
       bg-google-blue
       rounded-full

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="bg-white">
+    <div class="bg-white hover:shadow-2xl">
       <note
         class="text-left mt-4 cursor-pointer"
         :show-desc="false"
